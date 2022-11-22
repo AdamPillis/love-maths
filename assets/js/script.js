@@ -33,8 +33,8 @@ function runGame(gameType) {
     document.getElementById('answer-box').focus();
 
     //Creates two random numbers between 1 and 25
-    let num1 = Math.floor(Math.random() *25) +1;
-    let num2 = Math.floor(Math.random() *25) +1;
+    let num1 = Math.floor(Math.random() *1200) +1;
+    let num2 = Math.floor(Math.random() *120) +1;
 
     if(gameType === "addition") {
         displayAdditionQuestion(num1, num2);
@@ -61,7 +61,7 @@ function checkAnswer() {
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
-        alert("Hey! You got it right! :D");
+        alert("Well done Noah! You got it right! :D");
         incrementScore();
     } else {
         alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
